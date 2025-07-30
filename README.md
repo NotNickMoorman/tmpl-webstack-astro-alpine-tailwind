@@ -1,3 +1,79 @@
+🚀 Astro Starter Kit: Tailwind + Alpine + Linters
+sh
+Copy
+Edit
+npm create astro@latest -- --template basics
+Then add enhancements:
+
+sh
+Copy
+Edit
+npx astro add tailwind
+npm install alpinejs
+npm install --save-dev prettier eslint stylelint stylelint-config-standard
+📁 Project Structure
+text
+Copy
+Edit
+/
+├── public/
+│ └── favicon.svg
+├── src/
+│ ├── assets/
+│ │ └── astro.svg
+│ ├── components/
+│ │ └── Welcome.astro
+│ ├── layouts/
+│ │ └── Layout.astro
+│ ├── pages/
+│ │ └── index.astro
+│ └── scripts/
+│ └── alpine.js
+├── package.json
+├── astro.config.mjs
+├── tailwind.config.js
+├── postcss.config.js
+├── .eslintrc.json
+├── .prettierrc
+├── .stylelintrc.json
+🔧 Configuration Notes
+Tailwind CSS
+Handled via npx astro add tailwind. Adds:
+
+@import "tailwindcss" to global CSS
+
+tailwind.config.js + postcss.config.js setup
+
+Alpine.js
+Load in src/layouts/Layout.astro or index.astro:
+
+html
+Copy
+Edit
+
+<script type="module" src="/scripts/alpine.js" defer></script>
+
+Create src/scripts/alpine.js:
+
+🧞 Commands
+Command Action
+npm install Install dependencies
+npm run dev Start local dev server at localhost:4321
+npm run build Build production site to ./dist/
+npm run preview Preview your built site
+npx prettier . --write Format all files with Prettier
+npx eslint . Lint JS/TS files
+npx stylelint "\*_/_.css" Lint your CSS/Tailwind styles
+
+📚 Resources
+🌐 Astro Docs- https://docs.astro.build/en/getting-started/
+
+🎨 Tailwind CSS- https://tailwindcss.com/
+
+⚡ Alpine.js Docs- https://alpinejs.dev/
+
+📐 Prettier Config - https://prettier.io/docs/configuration.html
+
 # Astro Starter Kit: Basics
 
 ```sh
